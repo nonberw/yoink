@@ -141,8 +141,8 @@ Part of a "physical AI from scratch" series:
 
 - [x] [ARMageddon](https://github.com/nonberw/armageddon): IK, Jacobians, control
 - [x] **YOINK**: vision-based pick-and-place
-- [ ] Imitation learning: train a neural policy from demonstrations
-- [ ] RL locomotion: teach a quadruped to walk and not fall over when kicked
+- [x] [COPYCAT](https://github.com/nonberw/copycat): imitation learning from demonstrations (BC vs action chunking)
+- [x] [ZOOMIES](https://github.com/nonberw/zoomies): RL locomotion, a quadruped that walks and takes a kick
 - [ ] Sim-to-real on an actual SO-101 arm
 
 Ideas for YOINK itself: cluttered piles where cubes occlude each other, unknown object shapes (point-cloud grasp planning instead of "it's a cube"), and noisy depth like a real RealSense.

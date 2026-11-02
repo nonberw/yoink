@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yoink"
+version = "0.1.0"
+description = "Vision-based pick-and-place from scratch: RGB-D cube detection, grasping and sorting in MuJoCo"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "nonberw" }]
+requires-python = ">=3.10"
+dependencies = ["armageddon @ git+https://github.com/nonberw/armageddon", "numpy>=1.26", "mujoco>=3.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pillow>=10.0"]
+
+[project.urls]
+Homepage = "https://github.com/nonberw/yoink"
+
+[tool.setuptools]
+packages = ["yoink"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

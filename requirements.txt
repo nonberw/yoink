@@ -1,0 +1,5 @@
+armageddon @ git+https://github.com/nonberw/armageddon
+numpy>=1.26
+mujoco>=3.1
+pillow>=10.0
+pytest>=8.0

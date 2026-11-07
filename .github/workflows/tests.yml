@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      MUJOCO_GL: osmesa  # software OpenGL: the perception tests render the RGB-D camera
+      PYOPENGL_PLATFORM: osmesa
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Software OpenGL for MuJoCo's camera
+        run: sudo apt-get update && sudo apt-get install -y libosmesa6-dev
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt PyOpenGL
+          pip install -e . --no-deps
+      - name: Run tests
+        run: python -m pytest -q tests

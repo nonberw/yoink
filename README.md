@@ -1,5 +1,10 @@
 # YOINK
 
+[![tests](https://github.com/nonberw/yoink/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/nonberw/yoink/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](requirements.txt)
+[![MuJoCo](https://img.shields.io/badge/physics-MuJoCo-0b7285.svg)](https://mujoco.org)
+
 > A robot that looks at a messy table, finds every cube, and yoinks it into the bin of its color.
 > Vision from scratch, grasping with real friction physics, zero machine-learning magic. Just geometry doing numbers.
 
